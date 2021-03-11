@@ -8,11 +8,65 @@
     <title>JavaScript</title>
 </head>
 <body>
-    <div class="text-container">
-        <h1>I am the title</h1>
-        <p>I am the paragraph. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum iure libero ratione inventore suscipit temporibus dicta esse cum vero quaerat!</p>
+    <header>
+        <h2 class="logo">Dark 'n <span>Light</span></h2>
+        <nav>
+            <div class="hamburger hide-for-desktop">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+            <ul class="hide-for-mobile">
+                <li><a class="nav-link" href="#">Home</a></li>
+                <li><a class="nav-link" href="#">Information</a></li>
+                <li><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="dark-light">
+        <div class="text-container">
+            <h1>I am the title</h1>
+            <p>I am the paragraph. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum iure libero ratione inventore suscipit temporibus dicta esse cum vero quaerat!</p>
+        </div>
+        <button class="button">enter Dark-mode</button>
     </div>
-    <button class="button">enter Dark-mode</button>
+
+    <section class="tabs">
+        <div class="tabs-content container">
+            <div data-tab-target="#visuals" class="tab-item active">
+                <h2 class="tab-h2">info i</h2>
+            </div>
+            <div data-tab-target="#speed" class="tab-item">
+                <h2 class="tab-h2">info ii</h2>
+            </div>
+            <div data-tab-target="#life" class="tab-item">
+                <h2 class="tab-h2">info iii</h2>
+            </div>
+        </div>
+        <div class="tabs-inner-content container">
+            <div id="visuals" class="tabs-inner-content-text show">
+                <h3>Awesome Visuals</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur vero aliquam tempore necessitatibus delectus laborum libero nemo deleniti inventore mollitia?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias nostrum, minus illo maiores exercitationem a perspiciatis ratione. Maxime est tempore cumque consequatur dolore, eaque modi omnis! Perferendis quaerat beatae magnam.</p>
+                <button class="specs-btn">explore now</button>
+            </div>
+            <div id="speed" class="tabs-inner-content-text">
+                <h3>Fantastic speeds</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias nostrum, minus illo maiores exercitationem a perspiciatis ratione. Maxime est tempore cumque consequatur dolore, eaque modi omnis! Perferendis quaerat beatae magnam.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur vero aliquam tempore necessitatibus delectus laborum libero nemo deleniti inventore mollitia?</p>
+                <button class="specs-btn">explore now</button>
+            </div>
+            <div id="life" class="tabs-inner-content-text">
+                <h3>For life</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur vero aliquam tempore necessitatibus delectus laborum libero nemo deleniti inventore mollitia?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias nostrum, minus illo maiores exercitationem a perspiciatis ratione. Maxime est tempore cumque consequatur dolore, eaque modi omnis! Perferendis quaerat beatae magnam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quod nulla dolores impedit, illum sunt.
+                </p>
+                <button class="specs-btn">explore now</button>
+            </div>
+        </div>
+    </section>
+
     <script src="app.js"></script>
 </body>
 </html>

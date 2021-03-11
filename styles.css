@@ -5,7 +5,93 @@
     font-family: sans-serif;
 }
 
-body{
+@media screen and (max-width: 700px){
+    nav ul{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px){
+    nav .hamburger{
+        display: none;
+    }
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: absolute;
+    width: 100%;
+}
+
+.logo{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+.logo span{
+    font-weight: lighter;
+}
+
+.hamburger{
+    height: 30px;
+    width: 30px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+.hamburger:hover span:nth-child(2){
+    transform: translateX(-4px);
+}
+
+.hamburger span{
+    height: 2px;
+    width: 22px;
+    margin: 2px auto;
+    background-color: black;
+    display: block;
+    transition: all .3s ease-in-out;
+}
+
+.hamburger-dark{
+    background-color: white;
+}
+
+.hamburger span:nth-last-child(2){
+    width: 18px;
+    margin-left: 4px;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    list-style: none;
+    text-transform: uppercase;
+    font-size: bolder;
+    letter-spacing: 2px;
+    padding: 1rem .5rem;
+}
+
+li:not(:nth-last-child(1)){
+    margin-right: 2rem;
+}
+
+.nav-link{
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.dark-light{
+    text-align: center;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -50,11 +136,6 @@ button{
     border-radius: .75rem;
 }
 
-/* button:hover{
-    color:  rgb(31, 4, 49);
-    background-color: white;
-    border-color:  rgb(31, 4, 49);
-} */
 
 .btn-light{
     color:  rgb(31, 4, 49);
@@ -63,10 +144,85 @@ button{
 }
 
 .dark-mode{
-    background-color: rgb(31, 4, 49);
+    background-color: rgb(37, 8, 56);
     color: white;
 }
 
 .dark-background{
     background: linear-gradient(to right bottom, rgb(42, 12, 63), rgb(31, 4, 49));
+}
+
+
+
+.tabs{
+    background: linear-gradient(to right bottom, rgb(42, 12, 63), rgb(31, 4, 49));
+    padding: 4rem 0;
+}
+
+.container{
+    max-width: 90%;
+    margin: auto;
+}
+
+.tabs-content{
+    background-color: rgb(31, 4, 49);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.tab-item{
+    color: rgb(206, 206, 206);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 1rem;
+}
+
+.tab-item:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.active{
+    border-bottom: 3px solid white;
+    color: white;
+}
+
+.tabs-inner-content{
+    background: linear-gradient(to left bottom, rgb(58, 14, 87), rgb(42, 12, 63));
+    border: 0 0 .5rem .5rem;
+}
+
+.tabs-inner-content-text {
+    color: white;
+    padding: 3rem 2rem;
+    width: 60%;
+    margin: 0 auto;
+    display: none;
+    text-align: center;
+}
+
+.show{
+    display: block;
+}
+
+.tabs-inner-content-text h3{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+}
+
+.tabs-inner-content-text p{
+    margin-bottom: .75rem;
+    line-height: 1.5;
+}
+
+.tabs-inner-content-text button{
+    border: 2px solid white;
+    margin-top: 1.5rem;
+    border-radius: .5rem;
+    background-color: transparent;
 }
